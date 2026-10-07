@@ -1,0 +1,16 @@
+Package: zellij
+Version: 0.45.1
+Architecture: arm
+Maintainer: luc444s <luc444s@users.noreply.github.com>
+Installed-Size: 38504
+Filename: ./zellij_0.45.1_arm.deb
+Size: 9406192
+MD5sum: 7b897828f883e6d8167254f0c2075318
+SHA1: 39f4ade5c6635eda08214071aeb4075186e12268
+SHA256: 8e536c6f8b037b0f065201d686fcd29ad8aa25aa3e1bfa0c7213407d5857a10f
+Homepage: https://zellij.dev/
+Description: A terminal workspace with batteries included
+ Prebuilt for Termux on armeabi-v7a (32-bit ARM). Statically self-contained:
+ links only against bionic libc/libm/libdl/libz.
+License: MIT
+

@@ -18,7 +18,22 @@ These binaries are built from the **official upstream source** (tag `v0.45.1`, M
 
 ## Install
 
-### Option A — Termux `.deb` (recommended)
+### Option A — add this apt repo, then plain `pkg install zellij` (recommended)
+
+Register the repository once, then install zellij like any normal package:
+
+```sh
+mkdir -p "$PREFIX/etc/apt/sources.list.d"
+echo "deb [trusted=yes] https://luc444s.github.io/zellij-armv7-prebuilt/ ./" \
+  > "$PREFIX/etc/apt/sources.list.d/zellij.list"
+pkg update
+pkg install -y zellij
+zellij --version
+```
+
+After that, `pkg upgrade` will also update zellij normally. (Unsigned repo → `trusted=yes`.)
+
+### Option B — one-off `.deb` download
 
 ```sh
 cd ~
@@ -29,7 +44,7 @@ zellij --version
 
 Termux/apt then tracks it as a normal package (`dpkg -l zellij` → `ii`).
 
-### Option B — plain tarball
+### Option C — plain tarball
 
 ```sh
 curl -fsSL https://github.com/luc444s/zellij-armv7-prebuilt/releases/download/v0.45.1/zellij-0.45.1-armv7-linux-androideabi.tar.gz \
